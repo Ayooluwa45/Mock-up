@@ -1,18 +1,21 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./header/Header";
 
-function App() {
+import Comment from './components/Comment'
+
+function App(users) {
   return (
-  
+  <>
       <Router>
-         <Header/>
+       
+        <Comment/>
         <Routes>
          <Route path="/create-comment" element={<createComment/>}/>
-          <main>
-
-          </main>
         </Routes>
+        <main>
+          </main> 
+          
       </Router>
+      </>
   );
 }
 
