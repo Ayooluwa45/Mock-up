@@ -13,13 +13,7 @@
     line-height: 1.6;
   }
 
-  .container {
-    max-width: 768px;
-    margin: auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(3 1fr);
-  }
+
   .card {
     background-color: #fff;
     color: #333;
