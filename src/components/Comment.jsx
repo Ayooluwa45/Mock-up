@@ -1,4 +1,29 @@
-import {useEffect, useState} from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Comment.css";
+
+function Comment({ id, email, name, comments,onDelete }) {
+  const handleDelete= ()=>{
+    onDelete()
+  }
+
+
+  return (
+    <div className="card">
+      <h3>{name}</h3>
+      <span>{email}</span>
+      <span>
+        <button>edit</button>
+        <button onClick={handleDelete}>delete</button>
+      </span>
+    </div>
+  );
+}
+
+export default Comment;
+
+{
+  /*  import {useEffect, useState} from "react";
 
 import { Link } from "react-router-dom";
 function Comment({user}) {
@@ -16,13 +41,13 @@ const fetchData = async()=>{
   const data= await response.json()
   setUsers(data)
   
-/*  
+  
      await fetch('https://jsonplaceholder.typicode.com/users ')
 .then((res)=> res.json())
 .then((data)=> setUsers(data))
    .catch((err)=>{
      console.log(err)
-   })*/
+   })
   }
   console.log(users)
   
@@ -37,8 +62,8 @@ const fetchData = async()=>{
         <div className="comments">Comments</div>
         <div className="createComment">
           <Link to="/create-comment">Create Comment</Link>
-        </div>
-       {/*  <div className="itemContainer">
+        </div> 
+        <div className="itemContainer">
         <article>
           <div className="nav">
             <h3>name</h3>
@@ -53,7 +78,7 @@ const fetchData = async()=>{
             </p>
           </div>
         </article>
-        </div> */}
+        </div> 
          <div className="commentContainer">
           <div className="nav">
             <h3>name</h3>
@@ -75,4 +100,5 @@ const fetchData = async()=>{
   );
 }
 
-export default Comment;
+export default C;  */
+}
