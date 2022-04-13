@@ -9,13 +9,15 @@ function Comment({ id, email, name, comments,onDelete }) {
 
 
   return (
-    <div className="card">
+    <div className="container">
+    <div className="cardContent">
       <h3>{name}</h3>
       <span>{email}</span>
       <span>
         <button>edit</button>
         <button onClick={handleDelete}>delete</button>
       </span>
+    </div>
     </div>
   );
 }
